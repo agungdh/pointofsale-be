@@ -1,0 +1,13 @@
+services:
+  pos-db:
+    image: postgres:17
+    container_name: pos-db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: debian
+      POSTGRES_PASSWORD: debian
+      POSTGRES_DB: debian
+    volumes:
+      - ./postgre-data:/var/lib/postgresql/data
